@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color:#f2f2f2;
+}
+
+.container{
+    width:350px;
+    margin:100px auto;
+    background:white;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 0 10px gray;
+}
+
+h2{
+    text-align:center;
+}
+
+input[type=text],
+input[type=password]{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+    box-sizing:border-box;
+}
+
+input[type=submit],
+input[type=reset]{
+    width:48%;
+    padding:10px;
+    cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Student Management System</h2>
+
+<form action="login" method="post">
+
+<label>Username</label><br>
+<input type="text" name="username" required>
+
+<label>Password</label><br>
+<input type="password" name="password" required>
+
+<input type="submit" value="Login">
+<input type="reset" value="Clear">
+
+</form>
+
+</div>
+
+</body>
+</html>

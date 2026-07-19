@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    width:450px;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#333;
+}
+
+label{
+    font-weight:bold;
+    color:#444;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border:1px solid #4facfe;
+    box-shadow:0 0 5px rgba(79,172,254,.5);
+}
+
+.button-group{
+    display:flex;
+    justify-content:space-between;
+}
+
+.button-group input{
+    width:48%;
+    border:none;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.button-group input[type="submit"]{
+    background:#28a745;
+}
+
+.button-group input[type="submit"]:hover{
+    background:#218838;
+}
+
+.button-group input[type="reset"]{
+    background:#dc3545;
+}
+
+.button-group input[type="reset"]:hover{
+    background:#c82333;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Student Registration Form</h2>
+
+<form action="addstudent" method="post">
+
+<label for="id">Student ID</label>
+<input type="text" id="id" name="id" required>
+
+<label for="name">Student Name</label>
+<input type="text" id="name" name="name" required>
+
+<label for="email">Email</label>
+<input type="email" id="email" name="email" required>
+
+<label for="phone">Phone Number</label>
+<input type="tel" id="phone" name="phone" required>
+
+<label for="course">Course</label>
+<select id="course" name="course" required>
+    <option value="" selected disabled>-- Select Course --</option>
+    <option value="CSE">CSE</option>
+    <option value="IT">IT</option>
+    <option value="ECE">ECE</option>
+    <option value="EEE">EEE</option>
+    <option value="BME">BME</option>
+    <option value="CS">CS</option>
+    <option value="IOT">IOT</option>
+</select>
+
+<label for="address">Address</label>
+<textarea id="address" name="address" rows="4" required></textarea>
+
+<label for="dob">Date of Birth</label>
+<input type="date" id="dob" name="dob" required>
+
+<div class="button-group">
+    <input type="submit" value="Register">
+    <input type="reset" value="Clear">
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>
